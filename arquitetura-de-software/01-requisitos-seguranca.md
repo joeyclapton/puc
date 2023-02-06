@@ -15,4 +15,4 @@
 
 ### Referências
 
-[Software Engineering. Ian Sommerville. Mentcare: A mental health support system](Mentcare: A mental health support system)
+[https://software-engineering-book.com/case-studies/mentcare/](Software Engineering. Ian Sommerville. Mentcare: A mental health support system)
