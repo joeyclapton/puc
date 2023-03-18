@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-18T19:46:25.454Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44" etag="_wlePi2duKcFb2T1UHya" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-18T19:47:04.807Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44" etag="pz8R-2h03iJoqlIKyxdw" version="21.0.6" type="github">
   <diagram name="Página-1" id="qSlxNofYO-TkdhXsXlXk">
     <mxGraphModel dx="1278" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -36,6 +36,9 @@
         </mxCell>
         <mxCell id="R3wFgJJuvHEV5TrVa3Uq-15" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/nodejs-128.png" vertex="1" parent="1">
           <mxGeometry x="230" y="407" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-19" value="HTTP&lt;br&gt;AJAX&lt;br&gt;WebSockets" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="90" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
