@@ -1,1 +1,43 @@
-<mxfile host="app.diagrams.net" modified="2023-03-18T19:39:11.979Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44" version="21.0.6" etag="FJdtNs5iMzUoQ6jbPf7a" type="github"><diagram name="Página-1" id="qSlxNofYO-TkdhXsXlXk">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-03-18T19:46:25.454Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.44" etag="_wlePi2duKcFb2T1UHya" version="21.0.6" type="github">
+  <diagram name="Página-1" id="qSlxNofYO-TkdhXsXlXk">
+    <mxGraphModel dx="1278" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="R3wFgJJuvHEV5TrVa3Uq-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296.0999999999999" y="450" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/boxicons-logos/24/bxl-angular-128.png" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="88" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="R3wFgJJuvHEV5TrVa3Uq-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="267" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-5" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Client&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="232.2" y="268" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-6" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Server&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="232.2" y="490" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-11" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.sql_database;" vertex="1" parent="1">
+          <mxGeometry x="460" y="425" width="37.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-13" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Database&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="428.75" y="490" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.211;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="R3wFgJJuvHEV5TrVa3Uq-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="247" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3wFgJJuvHEV5TrVa3Uq-15" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/nodejs-128.png" vertex="1" parent="1">
+          <mxGeometry x="230" y="407" width="68" height="68" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
