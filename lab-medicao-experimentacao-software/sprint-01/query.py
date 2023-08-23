@@ -12,7 +12,7 @@ headers = {
 
 query = '''
 {
-  search(query: "stars:>5000", type: REPOSITORY, first: 10) {
+  search(query: "stars:>5000", type: REPOSITORY, first: 100) {
     edges {
       node {
         ... on Repository {
