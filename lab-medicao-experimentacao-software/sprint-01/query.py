@@ -1,6 +1,10 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-GITHUB_TOKEN = 'TOKEN GITHUB'
+load_dotenv()
+
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 
 headers = {
     'Authorization': f'Bearer {GITHUB_TOKEN}',
@@ -8,7 +12,7 @@ headers = {
 
 query = '''
 {
-  search(query: "stars:>5000", type: REPOSITORY, first: 100) {
+  search(query: "stars:>5000", type: REPOSITORY, first: 10) {
     edges {
       node {
         ... on Repository {
