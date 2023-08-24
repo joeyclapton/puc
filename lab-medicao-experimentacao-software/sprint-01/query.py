@@ -13,6 +13,10 @@ headers = {
 query = '''
 {
   search(query: "stars:>5000", type: REPOSITORY, first: 100) {
+  pageInfo {
+    hasNextPage
+    endCursor
+  }
     edges {
       node {
         ... on Repository {
