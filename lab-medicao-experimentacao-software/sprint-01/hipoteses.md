@@ -16,4 +16,4 @@
 - Hipótese 01: Talvez sim, pelo fato havem mais pessoas com o conhecimento na linguagem eles podem recebem mais contribuições externas.
 
 ## RQ 06. Sistemas populares possuem um alto percentual de issues fechadas?
-- Hipótese 01: Sim, pelo de receberem um alto número de contribuições.
+ - Hipótese 01: Sim, pelo de receberem um alto número de contribuições.
