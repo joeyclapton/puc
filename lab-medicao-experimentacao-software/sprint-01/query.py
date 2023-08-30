@@ -1,4 +1,5 @@
 import requests
+import csv
 import os
 from dotenv import load_dotenv
 
@@ -12,7 +13,7 @@ headers = {
 
 query = '''
 {
-  search(query: "stars:>5000", type: REPOSITORY, first: 100) {
+  search(query: "stars:>5000", type: REPOSITORY, first: 10) {
   pageInfo {
     hasNextPage
     endCursor
@@ -25,7 +26,7 @@ query = '''
           primaryLanguage {
             name
           }
-          pullRequests(states: MERGED, first: 10) {
+          pullRequests(states: MERGED, first: 1) {
             pageInfo {
               hasNextPage
               endCursor
@@ -60,26 +61,31 @@ query = '''
 
 response = requests.post('https://api.github.com/graphql', json={'query': query}, headers=headers)
 data = response.json()
+with open('dados_repositorios.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
 
-for repository in data['data']['search']['edges']:
-    repo_info = repository['node']
-    repo_name = repo_info['name']
-    updated_at = repo_info['updatedAt']
-    primary_language = repo_info['primaryLanguage']['name'] if repo_info['primaryLanguage'] else None
-    pull_requests = repo_info['pullRequests']['edges']
-    releases_count = repo_info['releases']['totalCount']
-    closed_issues_count = repo_info['issues']['totalCount']
-    total_issues_count = repo_info['totalIssues']['totalCount']
+    for repository in data['data']['search']['edges']:
+        repo_info = repository['node']
+        repo_name = repo_info['name']
+        updated_at = repo_info['updatedAt']
+        primary_language = repo_info['primaryLanguage']['name'] if repo_info['primaryLanguage'] else None
+        pull_requests = repo_info['pullRequests']['edges']
+        releases_count = repo_info['releases']['totalCount']
+        closed_issues_count = repo_info['issues']['totalCount']
+        total_issues_count = repo_info['totalIssues']['totalCount']
     
-    if total_issues_count > 0:
-        ratio_closed_issues = closed_issues_count / total_issues_count
-    else:
-        ratio_closed_issues = 0.0
+        if total_issues_count > 0:
+            ratio_closed_issues = closed_issues_count / total_issues_count
+        else:
+            ratio_closed_issues = 0.0
     
-    
-    print(f"Repository: {repo_name}")
-    print(f"Last Updated: {updated_at}")
-    print(f"Primary Language: {primary_language}")
-    print(f"Ratio of Closed Issues: {ratio_closed_issues}")
-    print(f"Releases Count: {releases_count}")
-    print("\n")
+        writer.writerow(['Name - '+repo_name])
+        writer.writerow(['Updated at - '+updated_at])
+        writer.writerow(['Primary Language - '+str(primary_language)])
+        writer.writerow(['Releases count - '+str(releases_count)])
+        writer.writerow(['Ratio closed issues - '+str(ratio_closed_issues)])
+        # Adicione uma linha em branco entre os conjuntos de dados
+        writer.writerow([])
+        writer.writerow([])
+
+print("Dados salvos em dados_repositorios.csv")
