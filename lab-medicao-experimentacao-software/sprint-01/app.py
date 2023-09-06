@@ -84,7 +84,7 @@ with open('dados_repositorios.csv', mode='w', newline='') as file:
         writer.writerow([])
         writer.writerow([])
     
-    box_plot(repo_ages, 'Sistemas populares lançam releases com frequência?', 'Idade do repositório em dias')
+    box_plot(repo_ages, 'Sistemas populares são maduros/antigos?', 'Idade do repositório em dias')
     box_plot(repo_pr_merged, 'Sistemas populares recebem muita contribuição externa?', 'Total de pull requests aceitas')
     box_plot(repo_releases, 'Sistemas populares lançam releases com frequência?', 'Total de releases')
     box_plot(repo_last_update, 'Sistemas populares são atualizados com frequência?', ' tempo até a última atualização')
