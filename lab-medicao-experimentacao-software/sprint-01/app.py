@@ -1,46 +1,9 @@
-import requests
 import csv
 from utils import getRepositoryAge
 from chart import box_plot, bar
-from github_api import getToken, getQuery
+from github_api import fetch_data
 
-github_token = getToken()
-
-headers = {
-    'Authorization': f'Bearer {github_token}',
-}
-
-query = getQuery();
-
-def fetch_data(query):
-    data_list = []  # Agora é uma lista, não um dicionário
-
-    cursor = None
-    has_next_page = True
-
-    while has_next_page and len(data_list) < 1000:
-        variables = {
-            "queryString": "stars:>500",
-            "cursor": cursor
-        }
-
-        response = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': variables}, headers=headers)
-        data = response.json()
-
-        search_data = data.get('data', {}).get('search', {})
-        edges = search_data.get('edges', [])
-
-        page_info = search_data.get('pageInfo', {})
-
-        data_list.extend(edges)  
-        # Extend a lista com novos elementos, não é uma atribuição direta
-        cursor = page_info.get('endCursor')
-        has_next_page = page_info.get('hasNextPage', False)
-        print(f'Request data {len(data_list)}...1000 ⌛️')
-
-    return data_list  # Retorna a lista completa
-
-data_list = fetch_data(query)
+data_list = fetch_data()
 
 with open('dados_repositorios.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
