@@ -18,7 +18,7 @@ def fetch_data(query):
     cursor = None
     has_next_page = True
 
-    while has_next_page and len(data_list) < 3:
+    while has_next_page and len(data_list) < 1000:
         variables = {
             "queryString": "stars:>500",
             "cursor": cursor
