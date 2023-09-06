@@ -9,7 +9,7 @@ def gen_box_plot(data, title, label):
     plt.xlabel(label)
 
     plt.scatter([median], [1], color='blue', marker='o', label='Mediana')
-    plt.text(median, 1, f'Mediana: {median}', color='yellow',
+    plt.text(median, 1, f'Mediana: {median}', color='red',
              verticalalignment='bottom', horizontalalignment='left')
 
     plt.yticks([])
