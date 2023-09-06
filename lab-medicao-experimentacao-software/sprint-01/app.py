@@ -1,53 +1,16 @@
 import requests
 import csv
-import os
 from utils import getRepositoryAge
-from dotenv import load_dotenv
 from graph import gen_box_plot
+from github_api import getToken, getQuery
 
-
-load_dotenv()
-
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+github_token = getToken()
 
 headers = {
-    'Authorization': f'Bearer {GITHUB_TOKEN}',
+    'Authorization': f'Bearer {github_token}',
 }
 
-query = '''
-query ($queryString: String!, $cursor: String) {
-  search(query: $queryString, type: REPOSITORY, first: 3, after: $cursor) {
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-    edges {
-      node {
-        ... on Repository {
-          name
-          updatedAt
-          createdAt
-          primaryLanguage {
-            name
-          }
-          pullRequests(states: MERGED) {
-            totalCount
-          }
-          releases {
-            totalCount
-          }
-          issues(states: CLOSED) {
-            totalCount
-          }
-          totalIssues: issues {
-            totalCount
-          }
-        }
-      }
-    }
-  }
-}
-'''
+query = getQuery();
 
 def fetch_data(query):
     data_list = []  # Agora é uma lista, não um dicionário
@@ -114,8 +77,8 @@ with open('dados_repositorios.csv', mode='w', newline='') as file:
         writer.writerow([])
         writer.writerow([])
 
-    # gen_box_plot(repo_ages)
-    # gen_box_plot(repo_pr_merged)
-    # gen_box_plot(repo_releases)
+    gen_box_plot(repo_ages, 'Idade dos repositórios', 'Dias')
+    gen_box_plot(repo_pr_merged, 'Total de PRs', 'Total de pull requests aceitas')
+    gen_box_plot(repo_releases, 'Total de releases', '')
 
 print("Dados salvos em dados_repositorios.csv ✅")
