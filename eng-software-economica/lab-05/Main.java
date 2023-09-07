@@ -8,9 +8,11 @@ public class Main {
         /**
          * Adicionando rotinas para Developes
         */
+        developer.addRoutine("“Programador inicia o dia de trabalho :)")
         developer.addRoutine("“Programador codifica”");
         developer.addRoutine("“Programador sai para almoçar”");
         developer.addRoutine("“Programador continua condificando”");
+        developer.addRoutine("“Programador encerra o dia de trabalho :)");
         developer.printRoutine();
         
         /**

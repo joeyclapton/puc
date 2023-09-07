@@ -1,0 +1,4 @@
+file,class,method,variable,usage
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Employee.java,Employee,addRoutine/1[java.lang.String],routine,1
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Employee.java,Employee,printRoutine/0,routine,1
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Main.java,Main,main/1[java.lang.String[]],args,0

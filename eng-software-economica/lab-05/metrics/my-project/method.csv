@@ -1,0 +1,7 @@
+file,class,method,constructor,line,cbo,cboModified,fanin,fanout,wmc,rfc,loc,returnsQty,variablesQty,parametersQty,methodsInvokedQty,methodsInvokedLocalQty,methodsInvokedIndirectLocalQty,loopQty,comparisonsQty,tryCatchQty,parenthesizedExpsQty,stringLiteralsQty,numbersQty,assignmentsQty,mathOperationsQty,maxNestedBlocksQty,anonymousClassesQty,innerClassesQty,lambdasQty,uniqueWordsQty,modifiers,logStatementsQty,hasJavaDoc
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/TemplateMethod.java,TemplateMethod,printRoutine/0,false,6,0,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1028,0,false
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/TemplateMethod.java,TemplateMethod,TemplateMethod/0,false,2,1,1,0,1,1,1,3,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,false
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Employee.java,Employee,addRoutine/1[java.lang.String],false,10,0,0,0,0,1,1,3,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,0,false
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Employee.java,Employee,printRoutine/0,false,15,0,0,0,0,2,1,5,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,3,4,0,false
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Employee.java,Employee,Employee/0,true,6,0,0,0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,false
+/Users/joeyclapton/rd/puc/eng-software-economica/lab-05/Main.java,Main,main/1[java.lang.String[]],false,3,0,0,0,0,1,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,9,0,false
