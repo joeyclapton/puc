@@ -1,0 +1,12 @@
+“Programador codifica”
+“Programador sai para almoçar”
+“Programador continua condificando”
+“Programador encerra o dia de trabalho”
+“Líder da equipe distribui tarefas para os programadores”
+“Líder da equipe sai para almoçar”
+“Líder da equipe auxilia os programadores”
+“Líder da equipe encerra o dia de trabalho”
+“Gerente de projetos reúne com os líderes das equipes”
+“Gerente de projetos sai para almoçar”
+“Gerente de projetos analisa novos requisitos”
+“Gerente de projetos encerra o dia de trabalho”
