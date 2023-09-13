@@ -48,7 +48,7 @@ def fetch_data():
     cursor = None
     has_next_page = True
 
-    while has_next_page and len(data_list) < 9:
+    while has_next_page and len(data_list) < 1000:
         variables = {
             "queryString": "stars:>500, language:java",
             "cursor": cursor
@@ -63,8 +63,6 @@ def fetch_data():
         page_info = search_data.get('pageInfo', {})
         data_list.extend(edges)  
         
-        os.system('date +"Today is: %A %d %B"')
-
         # Extend a lista com novos elementos, não é uma atribuição direta
         cursor = page_info.get('endCursor')
         has_next_page = page_info.get('hasNextPage', False)
