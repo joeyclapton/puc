@@ -23,8 +23,6 @@ with open('lista_repositorios.csv', mode='w', newline='') as file:
         repo_stars = repo_info['stargazerCount']
         repo_owner = repo_info['owner']['login']
         primary_language = repo_info['primaryLanguage']['name'] if repo_info.get('primaryLanguage') else None
-        clone_repo(repo_name, repo_owner, len(data_list))
-        generate_metrics(repo_name)
 
         writer.writerow(['Name - ' + repo_name])
         writer.writerow(['Primary Language - ' + str(primary_language)])

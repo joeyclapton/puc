@@ -38,17 +38,24 @@ query ($queryString: String!, $cursor: String) {
 '''
 
 def clone_repo(repo_name, repo_owner, number_repos):
-    if(number_repos == 2):
-        os.system(f'git clone https://github.com/{repo_owner}/{repo_name}.git')
+    print(number_repos)
+    os.system(f'cd repos && git clone https://github.com/{repo_owner}/{repo_name}.git')
 
+def generate_metrics(repo_name):
+    os.system(f'''
+     java -jar /Users/joeyclapton/rd/puc-lab/ck/target/ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar  /Users/joeyclapton/rd/puc/lab-medicao-experimentacao-software/sprint-02/repos/{repo_name} true 0 true /Users/joeyclapton/rd/puc/lab-medicao-experimentacao-software/sprint-02/metrics/
+''')
 
 def fetch_data():
     data_list = []  # Agora é uma lista, não um dicionário
     query = get_query()
     cursor = None
     has_next_page = True
+    count = 0
+    max_items = 100
 
-    while has_next_page and len(data_list) < 1000:
+
+    while count < max_items:
         variables = {
             "queryString": "stars:>500, language:java",
             "cursor": cursor
@@ -59,13 +66,29 @@ def fetch_data():
 
         search_data = data.get('data', {}).get('search', {})
         edges = search_data.get('edges', [])
-
-        page_info = search_data.get('pageInfo', {})
-        data_list.extend(edges)  
         
-        # Extend a lista com novos elementos, não é uma atribuição direta
+        if not edges:
+            break
+        
+        for edge in edges:
+            repo_name = edge['node']['name']
+            repo_owner = edge['node']['owner']['login']
+            
+            print(repo_name)
+            print(repo_owner)
+
+            data_list.append(edge)
+            clone_repo(repo_name, repo_owner, len(data_list))
+        
+        page_info = search_data.get('pageInfo', {})
         cursor = page_info.get('endCursor')
         has_next_page = page_info.get('hasNextPage', False)
-        print(f'Request data {len(data_list)}...1000 ⌛️')
+        
+        if not has_next_page:
+            break
+        
+        count += len(edges)
+        print(f'Request data {len(data_list)}...{max_items} ⌛️')
+
 
     return data_list  # Retorna a lista completa
