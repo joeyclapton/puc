@@ -1,5 +1,5 @@
 
-# Memorial Descritivo da Graduação em Engenharia de Software de Informação na PUC Minas (2019- 2025)
+# Memorial Descritivo da Graduação em Engenharia de Software na PUC Minas (2019- 2025)
 
 Joey Clapton 
 
